@@ -36,11 +36,12 @@ def run():
         print(features)
         prediction = model.predict(features)
         weight = [str(i) for i in prediction]
-        ans = weight
+        ans = ', '.join(weight)
         if ans == 0:
-            st.error('Error')
+            st.error("Error in the Inputs: Please Try Again")
+
         else:
-            st.success(ans)
+            st.success("The predicted Price of the Phone is:"+" "+ans)
             
 
 run()
